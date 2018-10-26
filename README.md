@@ -6,4 +6,6 @@ This LIRI application works with Node.js. The user can access to the app by inst
 
 The app is able to execute a keyword based on four command lines: spotify-this-song, movies-this, concert-this and do-what-it-says.
 
-1. spotify-this-song
+1. concert-this
+![Image of concert-this]
+https://github.com/Miked13/liri-node-app/blob/master/assets/screenshots/concert-this.png
