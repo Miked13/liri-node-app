@@ -15,9 +15,6 @@ var liri_node_Argument = process.argv[2];   // Command line to process informati
 var keyword = process.argv[3]; //This is the key search 
 
 //The switch statement makes it possible to change the 3rd Argument to (concert-this or movie-this...)
-function search(){
-
-}
 switch (liri_node_Argument) {
   case "spotify-this-song":
     spotifySong(keyword);
@@ -63,7 +60,8 @@ function concertVenue(keyword) {
     if (!error && response.statusCode === 200) {
       console.log("Venue's name : " + JSON.parse(body)[0].venue.name);
       console.log("Venue's location: " + JSON.parse(body)[0].venue.city + ", " + JSON.parse(body)[0].venue.region + " " +  JSON.parse(body)[0].venue.country);
-      console.log("Date of event: ") + moment(JSON.parse(body)[0].datetime).format('L');
+      console.log("Date of event: " + JSON.parse(body)[0].datetime);
+      moment().format();
     }
   })
 }
@@ -100,8 +98,10 @@ function do_What_It_Says(){
     if(err){
       console.log(err);
     }else{
-      var result = data.split(',');
-      spotifySong(result[0], result[1]);
+      //var result = data.split(',');
+      //spotifySong(result[0], result[1]);
+      console.log(data.split(','));
+      //spotifySong(data.split(','));
     }
   })
 }
