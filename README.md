@@ -8,4 +8,4 @@ The app is able to execute a keyword based on four command lines: spotify-this-s
 
 1. concert-this
 ![Image of concert-this]
-https://github.com/Miked13/liri-node-app/blob/master/assets/screenshots/concert-this.png
+(https://github.com/Miked13/liri-node-app/blob/master/assets/screenshots/concert-this.png)
