@@ -1,9 +1,8 @@
 # liri-node-app
 
-## Guide to use Language Interpretation and Recognition Interface with Node.js
-
-This LIRI application works with Node.js. The user can access to the app by installing the **Node Package Manager** for Spotify (**Node Spotify Api**), **Moment.js** and **Request**. 
-
+## Overview
+This Language Interpretation and Recognition Interface application works with Node.js in the command-line interface. The user can access to the app by installing the **Node Package Manager** for [https://www.npmjs.com/package/node-spotify-api](Node Spotify Api), [https://www.npmjs.com/package/moment](Moment.js) and [https://www.npmjs.com/package/request](Request) or install these packages by using the dependencies located in the package json: `npm install`.
+## User's guide
 The app is able to execute a keyword based on four command lines: spotify-this-song, movies-this, concert-this and do-what-it-says.
 
 1. concert-this
