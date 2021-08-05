@@ -1,15 +1,31 @@
 //Files inside ".env" are imported in liri.js
 require("dotenv").config();
+
 //list of variables needed for the applicatopn
+// =====================================================
+
+// Import the API keys
 const keys = require("./keys");
+
+// Import the FS package for read/write. fs allows you to read and write files
 const fs = require("fs");
 var request = require("request");
+
+// Import the node-spotify-api NPM package.
 var Spotify = require("node-spotify-api");
-var moment = require("moment");
+// Initialize the spotify API client using our client id and secret
 var spotify = new Spotify(keys.spotify);
+
+// Import the moment npm package.
+var moment = require("moment");
+
+// Add OMDB API Key
 var omdb = keys.omdb.id;
+
+// Add BandsInTown API Key
 var bandsintown = keys.bandsintown.id;
-//var fs = require("fs"); //fs allows you to read and write files
+
+
 //var outputfile = "./log.txt";   //The request output wile be placed in a file named log
 var liri_node_Argument = process.argv[2];   // Command line to process information
 var keyword = process.argv[3]; //This is the key search 
@@ -32,7 +48,7 @@ switch (liri_node_Argument) {
     do_What_It_Says(keyword);
     break;
 
-  default: console.log("default");
+  default: console.log("LIRI doesn't know that");
 }
 
 //List of function for each case in the Switch statement
@@ -98,10 +114,10 @@ function do_What_It_Says(){
     if(err){
       console.log(err);
     }else{
-      //var result = data.split(',');
-      //spotifySong(result[0], result[1]);
+      var result = data.split(',');
+      spotifySong(result[0], result[1]);
       console.log(data.split(','));
-      //spotifySong(data.split(','));
+      spotifySong(data.split(','));
     }
   })
 }
